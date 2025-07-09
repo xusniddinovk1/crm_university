@@ -1,6 +1,8 @@
 from django.contrib.auth import authenticate
 from rest_framework import serializers
 
+from custom_auth.models import CustomUser
+
 
 class LoginSerializer(serializers.Serializer):
     phone_number = serializers.CharField()
@@ -48,5 +50,5 @@ class ChangePasswordSerializer(serializers.ModelSerializer):
         return None
 
     class Meta:
-        model = User
+        model = CustomUser
         fields = ['old_password', 'new_password', 're_new_password']

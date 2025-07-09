@@ -1,4 +1,4 @@
-from user import UserSerializer
+from core.serializers.user import UserSerializer
 from core.models.student import Student
 from rest_framework import serializers
 

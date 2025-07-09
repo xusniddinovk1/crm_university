@@ -7,7 +7,7 @@ from rest_framework.views import APIView
 
 from core.models.student import Student
 from core.pagination import StandardResultsSetPagination
-from crm_app.permissions import IsAdminOrStaff
+from core.permissions import IsAdminOrStaff
 
 
 class StudentStatisticsView(APIView):
