@@ -1,8 +1,7 @@
 from rest_framework import viewsets
-from rest_framework.permissions import IsAuthenticated
 from core.models.payment import Payment
-from core.serializers.payment import
-from ..permissions import IsAdminOrStaffOrStudentOrTeacher
+from core.serializers.payment import PaymentSerializer
+from core.permissions import IsAdminOrStaffOrStudentOrTeacher
 
 
 class PaymentViewSet(viewsets.ModelViewSet):
