@@ -25,7 +25,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=50)
     phone_number = models.CharField(max_length=13, unique=True)
     data_joined = models.DateTimeField(auto_now_add=True)
-    group = models.ForeignKey('GroupStudent', on_delete=models.SET_NULL, null=True, blank=True,
+    group = models.ForeignKey('core.GroupStudent', on_delete=models.SET_NULL, null=True, blank=True,
                               related_name='students_in_group')
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)

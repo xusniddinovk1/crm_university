@@ -9,7 +9,7 @@ class GroupStudent(models.Model):
     teacher = models.ManyToManyField(Teacher, related_name="groups_taught")
     start_date = models.DateField()
     end_date = models.DateField()
-    students = models.ManyToManyField('CustomUser', related_name='group_students', blank=True,
+    students = models.ManyToManyField('custom_auth.CustomUser', related_name='group_students', blank=True,
                                       limit_choices_to={'is_student': True})
 
 

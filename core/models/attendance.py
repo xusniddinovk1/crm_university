@@ -6,6 +6,7 @@ from custom_auth.models import CustomUser
 
 class Attendance(models.Model):
     STATUS = (
+
         ('present', 'Keldi'),
         ('late', 'Kechikdi'),
         ('absent', 'Kelmadi'),
