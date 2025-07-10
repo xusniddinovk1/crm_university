@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'drf_yasg',
+    'rest_framework',
 
     'core',
     'custom_auth',
@@ -109,3 +110,15 @@ AUTHENTICATION_BACKENDS = [
     'custom_auth.authentication.PhoneBackend',
     'django.contrib.auth.backends.ModelBackend'
 ]
+
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header',
+            'description': 'JWT format: Bearer <token>',
+        }
+    },
+    'USE_SESSION_AUTH': False,  # faqat JWT ishlatish uchun
+}

@@ -12,7 +12,7 @@ schem_view = get_schema_view(
         contact=openapi.Contact(email="komronbek@gmail.com"),
         license=openapi.License(name="BSD License")
     ),
-    public=True
+    public=True,
 )
 
 urlpatterns = [
