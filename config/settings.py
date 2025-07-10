@@ -125,3 +125,6 @@ SWAGGER_SETTINGS = {
     },
     'USE_SESSION_AUTH': False,
 }
+
+CELERY_BROKER_URL = os.environ.get('CELERY_BROKER_URL')  # RabbitMQ as a broker
+CELERY_RESULT_BACKEND = os.environ.get('CELERY_RESULT_BACKEND')  # Redis as a result backend
