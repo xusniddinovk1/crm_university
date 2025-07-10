@@ -123,5 +123,5 @@ SWAGGER_SETTINGS = {
             'description': 'JWT format: Bearer <token>',
         }
     },
-    'USE_SESSION_AUTH': False,  # faqat JWT ishlatish uchun
+    'USE_SESSION_AUTH': False,
 }
